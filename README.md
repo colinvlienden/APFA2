@@ -1,4 +1,3 @@
-
 # De Opdracht:
 
 Implementeer een generieke Finite State Machine. Je machine moet in staat zijn om verschillende netwerken te vormen, dus niet alleen 2 overgangen per node of 4 nodes in totaal zoals in de formatieve opdracht. Met de eind-nodes moet netjes omgegaan worden. Zorg voor een uitwerking zonder duplicate code die volledig OO is.
