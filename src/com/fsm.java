@@ -2,26 +2,30 @@ package com;
 import java.util.List;
 import java.util.ArrayList;
 
+
 public class fsm {
     private final nodes run;
     private final String input;
+
 
     public fsm(nodes run, String input) {
         this.run = run;
         this.input = input;
     }
 
-    List runFsm() {
+    public List runFsm() {
+
+
         List<String> nodes = new ArrayList();
-        nodes State = run;
-        nodes.add(State.getName());
+        nodes Stage = run;
+        nodes.add(Stage.getName());
 
         for (char character: input.toCharArray()) {
-            nodes newNode = State.nextState("" + character + "");
+            nodes newNode = Stage.nextState("" + character + "");
             nodes.add(newNode.getName());
-            State = newNode;
-
+            Stage = newNode;
         }
+
         return nodes;
     }
 

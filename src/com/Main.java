@@ -23,5 +23,18 @@ public class Main {
         fsm fsm = new fsm(S0, input);
 
         System.out.println(fsm);
+
+        nodes S4 = new nodes("S4");
+        S4.setNode1(S0);
+
+        S0.setNode3(S3);
+        S1.setNode3(S0);
+        S2.setNode1(S3);
+        S2.setNode3(S3);
+        S3.setNode3(S4);
+
+        String input2 = "BCBBACA";
+        fsm fsm2 = new fsm(S0, input2);
+        System.out.println(fsm2);
     }
 }
