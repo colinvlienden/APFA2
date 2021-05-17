@@ -1,4 +1,5 @@
 package com;
+import java.util.HashMap;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -14,7 +15,8 @@ public class fsm {
     }
 
     public List runFsm() {
-
+        //basic hash
+        //HashMap<String, String> nodeMap = new Hashmap();
 
         List<String> nodes = new ArrayList();
         nodes Stage = run;
@@ -24,8 +26,10 @@ public class fsm {
             nodes newNode = Stage.nextState("" + character + "");
             nodes.add(newNode.getName());
             Stage = newNode;
+            //hash
+            //nodeMap.put(newNode.getName(), String.valueOf(character));
         }
-
+        //System.out.println(nodeMap.keySet());
         return nodes;
     }
 
@@ -35,5 +39,8 @@ public class fsm {
                 "\ninput: " + input +
                 "\noutput: " + runFsm() +
                 "\n}";
+    }
+
+    private class Hashmap extends HashMap<String, String> {
     }
 }
